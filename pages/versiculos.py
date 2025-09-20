@@ -21,20 +21,24 @@ LIST_BOOKS_ABREVIATURES = [
     "Mateo", "Marcos", "Lc", "Juan","Hechos","Romanos","1 Corintios","2 Corintios","Galátas","Efesios", "Filipenses","Colosenses","1 Tesalonicenses","2 Tesalonicenses","1 Timoteo", "2 Timoteo", "Tito","Filemón","Hebreos","Santiago","1 Pedro", "2 Pedro", "1 Juan", "2 Juan","3 Juan","Judas","Apocalipsis"
 ]
 
-st.write("Versiculos")
 
-st.write("Filtrar por:")
+st.sidebar.write("Filtrar por:")
 
-book_selected = st.selectbox("Libro", LIST_BOOKS)
+book_selected = st.sidebar.selectbox("Libro", LIST_BOOKS)
 
 
 index_abreviature = LIST_BOOKS.index(book_selected)
 
 total_chapters = repository.count_chapters(LIST_BOOKS_ABREVIATURES[index_abreviature])
 
-chapter_selected = st.selectbox("Capítulo", [i for i in range(1, (total_chapters + 1))])
+chapter_selected = st.sidebar.selectbox("Capítulo", [i for i in range(1, (total_chapters + 1))])
 
 versiculos = repository.filter_by_name_book(f"{LIST_BOOKS_ABREVIATURES[index_abreviature]}. {chapter_selected}: ")
+
+
+st.title(book_selected)
+st.write(f'Cap. {chapter_selected}')
+st.divider(width=1000)
 
 for v in versiculos:
     components.html(f"""

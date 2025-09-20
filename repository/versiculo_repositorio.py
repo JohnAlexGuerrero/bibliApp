@@ -38,6 +38,10 @@ class VersiculoRepositorio:
         query = {"verse": {"$regex":f'{name}'}}
         return self.collection.find(query)
     
+    def find_one(self, name: str) -> Versiculo:
+        query = {"verse": f'{name}'}
+        return self.collection.find_one(query)
+    
     def count_chapters(self, name: str) -> int: 
         chapters = []
         

@@ -2,19 +2,17 @@ from models.versiculo import Versiculo
 from repository.versiculo_repositorio import VersiculoRepositorio
 
 
-texto = """En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo; y será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen escritos en el libro.
-Y muchos de los que duermen en el polvo de la tierra serán despertados, unos para vida eterna, y otros para vergüenza y confusión perpetua.
-Los entendidos resplandecerán como el resplandor del firmamento; y los que enseñan la justicia a la multitud, como las estrellas a perpetua eternidad.
-Pero tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia se aumentará.
-Y yo Daniel miré, y he aquí otros dos que estaban en pie, el uno a este lado del río, y el otro al otro lado del río.
-Y dijo uno al varón vestido de lino, que estaba sobre las aguas del río: ¿Cuándo será el fin de estas maravillas?
-Y oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su diestra y su siniestra al cielo, y juró por el que vive por los siglos, que será por tiempo, tiempos, y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas serán cumplidas.
-Y yo oí, mas no entendí. Y dije: Señor mío, ¿cuál será el fin de estas cosas?
-El respondió: Anda, Daniel, pues estas palabras están cerradas y selladas hasta el tiempo del fin.
-Muchos serán limpios, y emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá, pero los entendidos comprenderán.
-Y desde el tiempo que sea quitado el continuo sacrificio hasta la abominación desoladora, habrá mil doscientos noventa días.
-Bienaventurado el que espere, y llegue a mil trescientos treinta y cinco días.
-Y tú irás hasta el fin, y reposarás, y te levantarás para recibir tu heredad al fin de los días."""
+texto = """Venid y volvamos a Jehová; porque él arrebató, y nos curará; hirió, y nos vendará.
+Nos dará vida después de dos días; en el tercer día nos resucitará, y viviremos delante de él.
+Y conoceremos, y proseguiremos en conocer a Jehová; como el alba está dispuesta su salida, y vendrá a nosotros como la lluvia, como la lluvia tardía y temprana a la tierra.
+¿Qué haré a ti, Efraín? ¿Qué haré a ti, oh Judá? La piedad vuestra es como nube de la mañana, y como el rocío de la madrugada, que se desvanece.
+Por esta causa los corté por medio de los profetas, con las palabras de mi boca los maté; y tus juicios serán como luz que sale.
+Porque misericordia quiero, y no sacrificio, y conocimiento de Dios más que holocaustos.
+Mas ellos, cual Adán, traspasaron el pacto; allí prevaricaron contra mí.
+Galaad, ciudad de hacedores de iniquidad, manchada de sangre.
+Y como ladrones que esperan a algún hombre, así una compañía de sacerdotes mata en el camino hacia Siquem; así cometieron abominación.
+En la casa de Israel he visto inmundicia; allí fornicó Efraín, y se contaminó Israel.
+Para ti también, oh Judá, está preparada una siega, cuando yo haga volver el cautiverio de mi pueblo."""
 
 lista_versos = texto.split("\n")
 
@@ -23,7 +21,7 @@ repository = VersiculoRepositorio()
 print(len(lista_versos))
 
 # for i in range(len(lista_versos)):
-#     versiculo = Versiculo(None, verse=f'Dn. 12: {i + 1}', text=lista_versos[i])
+#     versiculo = Versiculo(None, verse=f'Os. 6: {i + 1}', text=lista_versos[i])
 #     repository.save(versiculo)
 #     print(f'{versiculo.verse} -> {versiculo.text}')
 
